@@ -13,4 +13,4 @@ Version: Python 2.7.16
 
 F. Install pip
 --------------
-Version:
+Version: pip-20.2.3
