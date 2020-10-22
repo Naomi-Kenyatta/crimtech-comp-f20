@@ -40,8 +40,6 @@ class Snake(object):
 
     def collision(self, x, y):
         # TODO: See section 2, "Collisions", and section 4, "Self Collisions"
-        if(x > WIDTH or x < 0 or y > HEIGHT or x < 0):
-            return True
         pass
     
     def coyote_time(self):
@@ -50,9 +48,7 @@ class Snake(object):
 
     def move(self):
         # TODO: See section 1, "Move the snake!". You will be revisiting this section a few times.
-        self.body[0] = (self.body[0][0]+ DIR[self.direction][0],self.body[0][1]+ DIR[self.direction][1])
-        self.body[1] = (self.body[1][0]+ DIR[self.direction][0],self.body[1][1]+ DIR[self.direction][1])
-        collision(self,self.body[0][0],self.body[0][1])
+        
         pass
 
     def kill(self):

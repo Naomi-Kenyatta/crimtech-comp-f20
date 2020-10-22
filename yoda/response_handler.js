@@ -21,5 +21,60 @@ let std_quotes = ["Patience you must have, my young padawan.",
 
 function respond() {
     // Your Code Here
-    console.log("Hello World!");
+    var butt = document.getElementById("warren")
+    var img = document.getElementById("lulu")
+    var stuff = document.getElementById("eric").value //= "Hello I am ErIc"
+    console.log(stuff);
+    var pic = "img/"
+    if(stuff.toLowerCase().search("baby")!=-1 || stuff.toLowerCase().search("cute")!=-1)
+    {
+        pic+="cute-"
+    }
+    else
+    {
+        pic+="regular-"
+    }
+    if(stuff.toLowerCase().search("force")!=-1 && stuff.toLowerCase().search("dark")!=-1)
+    {
+        if(pic != "img/cute-")
+        {
+            var i = Math.floor(Math.random() * dark_quotes.length)
+            butt.textContent = dark_quotes[i];  
+        }
+        pic+="dark.jpg"
+    }
+    else if(stuff.toLowerCase().search("force")!=-1)
+    {
+        if(pic != "img/cute-")
+        {
+            var i = Math.floor(Math.random() * force_quotes.length)
+            butt.textContent = force_quotes[i];  
+        }
+        pic+="force.jpg"
+    }
+    else
+    {
+        if(pic != "img/cute-")
+        {
+            var i = Math.floor(Math.random() * std_quotes.length)
+            butt.textContent = std_quotes[i];  
+        }
+        pic+="std.jpg"
+    }
+
+    img.setAttribute("src",pic)
+    document.getElementById("eric").value = ""
+
+    var input = document.getElementById("lauren");
+
+    input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("lauren").click();
+        }
+      });
+    console.log(butt.textContent);
 }

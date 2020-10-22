@@ -9,12 +9,23 @@
         console.log("You found me!");
         function square(i) {
             // Your code here!
-            return 0
-        }
-
+            if(typeof(i) != "number"){
+                return -1
+            } 
+            return i*i;}
         function numberString(i) {
             // Your code here!
-            return ""
+            if(typeof(i) != "number"){
+                return -1
+            } 
+            if(i<0){
+                return -1;
+            }
+            var word = "";
+            for (j = 1; j < i; j++) {
+                word +=j;
+            }
+            return word;
         }
     </script>
 </body>

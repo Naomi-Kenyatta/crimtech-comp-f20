@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>
+            YODA CHAT
+        </title>
+        <script type = "text/javascript" src="response_handler.js"></script>  
+        <link rel ='shortcut icon' type='image/png'href='img/favicon.ico'>
         
     </head>
     <body>
-
+        <center>
+            <img src = "img/cute-force.jpg" width="400" height="250" id = "lulu">
+            <p id = "warren">
+                To yoda chat I welcome you. Yes, hmmmmm.
+            </p>
+            <input type = "text" id = "eric" value= "To yoda chat I welcome you. Yes, hmmmmm.">
+            <input type = "button" onclick = "respond()" value = "Display" id = "lauren">          
+        </center>
+        <script>
+            var input = document.getElementById("eric");
+            input.addEventListener("keyup", function(event) 
+            {
+            // Number 13 is the "Enter" key on the keyboard
+                if (event.keyCode === 13) 
+                {
+                // Cancel the default action, if needed
+                    event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("lauren").click();
+                }
+            });
+        </script>
     </body>
 </html>
