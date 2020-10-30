@@ -65,16 +65,5 @@ function respond() {
     img.setAttribute("src",pic)
     document.getElementById("eric").value = ""
 
-    var input = document.getElementById("lauren");
-
-    input.addEventListener("keyup", function(event) {
-        // Number 13 is the "Enter" key on the keyboard
-        if (event.keyCode === 13) {
-          // Cancel the default action, if needed
-          event.preventDefault();
-          // Trigger the button element with a click
-          document.getElementById("lauren").click();
-        }
-      });
-    console.log(butt.textContent);
+    
 }
